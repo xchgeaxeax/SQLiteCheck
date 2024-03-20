@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CTF SIGNIN</title>
+  </head>
+  <body>
+    <h1>HERE'S YOUR FLAG</h1>
+    <p>USERNAME: {{ username }}</p>
+    {% if passwords %}
+    <p>FLAG:</p>
+    <ul>
+      {% for password in passwords %}
+      <li>{{ password }}</li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>THERE'S NO FLAG.</p>
+    {% endif %}
+    <a href="/">TRY AGAIN</a>
+  </body>
+</html>
